@@ -1,0 +1,121 @@
+.footer-field
+{   padding-top: 60px;
+    padding-bottom: 60px;
+
+    background-color: var(--hero-footer-color);
+}
+.footer-list-item
+{ 
+font-size: 14px;
+line-height: 1.71;
+letter-spacing: 0.03em;
+color: rgba(255, 255, 255, 0.6);
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+&:focus,
+&:hover
+{
+    color: var(--accent-text-color); 
+}
+}
+
+
+
+.address-list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column ;
+}
+.address-item:not(:last-child)
+{
+margin-bottom: 9px;
+}
+.map-color-white{
+    color:var(--text-color-white);
+}
+.web-footer
+{
+    margin-bottom: 20px;
+    
+}
+.title-join{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--logo-text-white);
+    margin-bottom: 20px;
+    }
+          
+        .footer-contact{
+            margin-right: 70px;
+        }
+    
+    .footer-send{
+        margin-left: auto;
+         input:focus{
+            outline: none;
+            border: 1px solid var(--accent-text-color);
+    
+        }
+    }
+    
+    .footer-send-field{
+        display: flex;
+        justify-content: baseline;
+       
+            input
+        {
+            margin: 0;
+            padding: 15px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-sizing: border-box;
+            /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15)); */
+            border-radius: 4px;
+            font-size: 16px;
+            line-height: 1.25;
+            letter-spacing: 0.03em;
+            color: var(--text-color-white);
+            background-color:transparent;
+            width: 358px;
+            transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+           
+            &::placeholder{
+                color: rgba(255, 255, 255, 0.6);
+            }
+        }
+    }
+        
+        
+        .label-send{
+            display: inline-block;
+    
+        }
+    
+    .button-send{
+            
+        margin-left: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        &:hover,
+        &:focus
+        {
+            background-color: #188CE8;
+        
+        }
+       
+    }
+    
+.send-icon
+{
+    width: 24px;
+    height: 24px;
+    fill: var(--bgc-main);
+    margin-left: 10px;
+}
