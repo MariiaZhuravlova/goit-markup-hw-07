@@ -11,14 +11,18 @@
     display: flex;
       
 }
-.case-list > .application-item{
-    flex-basis: calc((100% / 3) - var(--card-set-gap));
-    }
+.application-item{
+    .case-list > &{
+        flex-basis: calc((100% / 3) - var(--card-set-gap));
+        }
+    
+        &:not(:last-child)
+        {
+            margin-right: var(--card-set-gap);
+        }
+}
 
-    .application-item:not(:last-child)
-    {
-        margin-right: var(--card-set-gap);
-    }
+
 .section-title
 {
     margin-bottom: 50px;

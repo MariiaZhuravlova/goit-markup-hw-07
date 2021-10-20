@@ -205,10 +205,6 @@ img {
   color: var(--accent-text-color);
 }
 
-.contact-item-link:hover .icon-phone, .contact-item-link:hover .icon-mail, .contact-item-link:focus .icon-phone, .contact-item-link:focus .icon-mail {
-  fill: var(--accent-text-color);
-}
-
 .icon-phone {
   width: 10px;
   height: 16px;
@@ -216,11 +212,19 @@ img {
   fill: currentColor;
 }
 
+.contact-item-link:hover .icon-phone, .contact-item-link:focus .icon-phone {
+  fill: var(--accent-text-color);
+}
+
 .icon-mail {
   width: 16px;
   height: 12px;
   margin-right: 10px;
   fill: currentColor;
+}
+
+.contact-item-link:hover .icon-mail, .contact-item-link:focus .icon-mail {
+  fill: var(--accent-text-color);
 }
 
 .hero-field {
@@ -371,14 +375,6 @@ img {
   flex-wrap: wrap;
 }
 
-.team-list > .team-item {
-  flex-basis: calc((100% / 4) - var(--card-set-gap));
-}
-
-.team-item:not(:last-child) {
-  margin-right: var(--card-set-gap);
-}
-
 .team-content {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -388,6 +384,14 @@ img {
   background-color: var(--bgc-main);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+
+.team-list > .team-item {
+  flex-basis: calc((100% / 4) - var(--card-set-gap));
+}
+
+.team-item:not(:last-child) {
+  margin-right: var(--card-set-gap);
 }
 
 .team-member {
@@ -418,6 +422,14 @@ img {
 .client-item {
   width: 170px;
   height: 92px;
+}
+
+.client-list > .client-item {
+  flex-basis: calc((100% / 6) - var(--card-set-gap));
+}
+
+.client-item + .client-item {
+  margin-left: var(--card-set-gap);
 }
 
 .client-link {
@@ -451,14 +463,6 @@ img {
 .client-list {
   display: flex;
   justify-content: center;
-}
-
-.client-list > .client-item {
-  flex-basis: calc((100% / 6) - var(--card-set-gap));
-}
-
-.client-item + .client-item {
-  margin-left: var(--card-set-gap);
 }
 
 .client-icon {
@@ -580,6 +584,20 @@ img {
   padding-top: 174px;
 }
 
+.portfolio-list > .portfolio-item {
+  flex-basis: calc((100% / 3) - var(--card-set-gap));
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
+}
+
+.portfolio-item:nth-child(3n+1) {
+  margin-left: 0;
+}
+
+.portfolio-item:nth-child(-n+3) {
+  margin-top: 0;
+}
+
 .portfolio-card-content {
   padding: 20px 24px;
   background: #FFFFFF;
@@ -691,24 +709,14 @@ img {
   justify-content: center;
 }
 
-.portfolio-list > .portfolio-item {
-  flex-basis: calc((100% / 3) - var(--card-set-gap));
-  margin-left: var(--card-set-gap);
-  margin-top: var(--card-set-gap);
-}
-
-.portfolio-item:nth-child(3n+1) {
-  margin-left: 0;
-}
-
-.portfolio-item:nth-child(-n+3) {
-  margin-top: 0;
-}
-
 .social-item {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+}
+
+.social-item + .social-item {
+  margin-left: 10px;
 }
 
 .social-link {
@@ -724,20 +732,8 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-link:hover {
+.social-link:hover, .social-link:focus {
   background-color: var(--accent-text-color);
-}
-
-.social-link:hover .social-icon {
-  fill: #ffffff;
-}
-
-.social-link:focus {
-  background-color: var(--accent-text-color);
-}
-
-.social-link:focus .social-icon {
-  fill: #ffffff;
 }
 
 .social-list {
@@ -745,15 +741,16 @@ img {
   justify-content: center;
 }
 
-.social-item + .social-item {
-  margin-left: 10px;
-}
-
 .social-icon {
   width: 20px;
   height: 20px;
   fill: currentColor;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: #ffffff;
 }
 
 .footer-social-list {
@@ -796,15 +793,15 @@ img {
   justify-content: center;
 }
 
-.close-modal:hover .icon-close {
-  fill: var(--accent-text-color);
-}
-
 .icon-close {
   width: 18px;
   height: 18px;
   fill: #000000;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-modal:hover .icon-close {
+  fill: var(--accent-text-color);
 }
 
 .modal-title {
@@ -906,10 +903,6 @@ textarea {
   border-color: var(--accent-text-color);
 }
 
-.input-field:focus ~ .icon-modal {
-  fill: var(--accent-text-color);
-}
-
 .icon-modal {
   position: absolute;
   height: 18px;
@@ -919,6 +912,10 @@ textarea {
   transform: translateY(-50%);
   cursor: pointer;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-field:focus ~ .icon-modal {
+  fill: var(--accent-text-color);
 }
 
 .comment {
@@ -935,7 +932,6 @@ textarea {
   justify-content: center;
   align-items: center;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* z-index: 2;  */
 }
 
 .backdrop.is-hidden {

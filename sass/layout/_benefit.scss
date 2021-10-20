@@ -1,6 +1,4 @@
-.benefits-section{
-   
-}
+
 .benefits-list{
     padding: 0;
     margin: 0;
@@ -35,16 +33,18 @@
    }
 
 .benefits-item-card{
-}
-.benefits-list > .benefits-item-card
+    
+    .benefits-list > &
 {
    flex-basis: calc((100% / 4) - var(--card-set-gap));
       
  }
 
- .benefits-item-card:not(:last-child){
- margin-right: var(--card-set-gap);
+    &:not(:last-child){
+    margin-right: var(--card-set-gap);
+    }
 }
+
 .benefits-title
 {margin-bottom: 10px;
 font-weight: 700;
