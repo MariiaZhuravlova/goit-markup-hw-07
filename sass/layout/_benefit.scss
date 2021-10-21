@@ -27,9 +27,9 @@
     background-color: var(--bgc-section);
     margin-bottom: 30px;
 
-    display: flex;
+    @extend %align-items;
     justify-content: center;
-    align-items: center;
+    
    }
 
 .benefits-item-card{
