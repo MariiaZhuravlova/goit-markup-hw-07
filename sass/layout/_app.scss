@@ -1,9 +1,17 @@
-.app-section
+.application
 {
     padding-top: 0;  
 
 }
-.case-list{
+
+.application__title
+{
+    margin-bottom: 50px;
+   
+    @include font(700, 36px, 1.17, 0.03em);
+    text-align: center;
+}
+.application__list{
     padding: 0;
     margin: 0;
     list-style: none;
@@ -11,8 +19,8 @@
     display: flex;
       
 }
-.application-item{
-    .case-list > &{
+.application__item{
+    .application__list > &{
         flex-basis: calc((100% / 3) - 30px);
         }
     
@@ -21,17 +29,14 @@
             margin-right: $card-set-gap;
         }
 }
-
-
-.section-title
-{
-    margin-bottom: 50px;
-   
-    @include font(700, 36px, 1.17, 0.03em);
-    text-align: center;
+.application__thumb{
+    position: relative;
+    overflow: hidden;
+    
 }
-.position-title
- {
+
+
+.application__text-background {
     position: absolute;
     bottom: 0;
              
@@ -43,14 +48,11 @@
     justify-content: center;
     
 } 
-.app-thumb{
-    position: relative;
-    overflow: hidden;
-    
-}
-.app-title{
+
+.application__text{
     
     @include font(700, 14px, 1.17, 0.03em);
     text-transform: uppercase;
     color: $text-color-white;
+    
 }

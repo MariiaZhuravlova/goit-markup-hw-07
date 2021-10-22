@@ -4,7 +4,30 @@
 
     background-color: $hero-footer-color;
 }
-.footer-list-item
+
+.footer-container{
+    display: flex;
+    align-items: baseline;
+}
+.footer-contact{
+    margin-right: 70px;
+}
+.address-list{
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column ;
+}
+.address-list__item{
+    &:not(:last-child)
+    {
+    margin-bottom: 9px;
+    }
+}
+.address-list__link
 { 
 @include font(400, 14px, 1.71, 0.03em);
 color: rgba(255, 255, 255, 0.6);
@@ -17,51 +40,34 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 }
 
-
-
-.address-list{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-
-    display: flex;
-    flex-direction: column ;
-}
-
-.address-item{
-    &:not(:last-child)
-    {
-    margin-bottom: 9px;
-    }
-}
-.map-color-white{
+.address-list__link-white{
     color:$text-color-white;
 }
-.web-footer
-{
-    margin-bottom: 20px;
-    
+.footer-social{
+    display: flex;
+    flex-direction: column;
 }
-.title-join{
+.footer-container__title{
     
     @include font(700, 14px, 1.14, 0.03em);
     text-transform: uppercase;
     color: $logo-text-white;
     margin-bottom: 20px;
     }
-          
-        .footer-contact{
-            margin-right: 70px;
-        }
     
-    .footer-send{
-        margin-left: auto;
-         input:focus{
-            outline: none;
-            border: 1px solid $accent-text-color;
-    
-        }
+       
+    .label-send{
+        display: inline-block;
+
     }
+.footer-send{
+    
+    margin-left: auto;
+input:focus{
+outline: none;
+border: 1px solid $accent-text-color;
+}
+}
     
     .footer-send-field{
         display: flex;
@@ -88,11 +94,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
         
         
-        .label-send{
-            display: inline-block;
-    
-        }
-    
+            
     .button-send{
             
         margin-left: 12px;
@@ -109,7 +111,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
        
     }
     
-.send-icon
+.button-send__icon
 {
     width: 24px;
     height: 24px;

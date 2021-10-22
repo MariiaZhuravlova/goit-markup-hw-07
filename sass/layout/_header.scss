@@ -22,53 +22,37 @@ font-family: Raleway;
 color: $accent-text-color;
 
 }
+.logo-text__margin{
+margin-bottom: 20px;}
 
-
-.logo-studio-black
+.logo-text__studio
 {
     color: $logo-text-black;
     margin-right: 93px;
 }
-.logo-studio-white
-{
+.logo-text__footer
+{ 
    color: $logo-text-white;
 }
 
   
- .site-nav-list
+.site-nav
  {
      display: flex;
      align-items: center;
      
-     .site-nav-link.current
+     .site-nav__link.current
         {
             color: $accent-text-color; 
         }  
  }
 
- .site-nav-item{
+.site-nav__item{
         &:not(:last-child){
         margin-right: 50px;
         }
 }
-
-.current{
-   
-    &::after{
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 4px;
-        border-radius: 2px;
-        background-color: $accent-text-color;
-        display: block;
-        bottom: -35px;
-
-    }
-}
-
-
-.site-nav-link
+.site-nav__link
 {   
     padding-top: 10px; 
     padding-bottom: 10px;
@@ -87,22 +71,32 @@ color: $accent-text-color;
     }
         
 }
+.current{
+   
+    &::after{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: $accent-text-color;
+        display: block;
+        bottom: -35px;
 
+    }
+}
 
 .contact-list{
     display: flex;
     margin-left: auto;
 }
 
-
-
-
-.contact-item{
+.contact-list__item{
     &:not(:last-child){
         margin-right: 50px;
     }
 }
-.contact-item-link{
+.contact-list__link{
     padding-top: 10px; 
     padding-bottom: 10px;
 
@@ -120,23 +114,23 @@ color: $accent-text-color;
    }
    
 
-.icon-phone{
+.contact-list__icon-phone{
 width: 10px;
 height: 16px;
 margin-right: 10px;
 fill: currentColor;
-.contact-item-link:hover &, .contact-item-link:focus & 
+.contact-list__link:hover &, .contact-list__link:focus & 
     {
         fill: $accent-text-color;
     
     }
 }
-.icon-mail{
+.contact-list__icon-mail{
   width: 16px;
   height: 12px;  
   margin-right: 10px;
     fill: currentColor;
-    .contact-item-link:hover &, .contact-item-link:focus & 
+    .contact-list__link:hover &, .contact-list__link:focus & 
         {
             fill: $accent-text-color;
         
