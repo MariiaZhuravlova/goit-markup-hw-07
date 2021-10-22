@@ -13,12 +13,12 @@
 }
 .application-item{
     .case-list > &{
-        flex-basis: calc((100% / 3) - var(--card-set-gap));
+        flex-basis: calc((100% / 3) - 30px);
         }
     
         &:not(:last-child)
         {
-            margin-right: var(--card-set-gap);
+            margin-right: $card-set-gap;
         }
 }
 
@@ -26,10 +26,8 @@
 .section-title
 {
     margin-bottom: 50px;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
+   
+    @include font(700, 36px, 1.17, 0.03em);
     text-align: center;
 }
 .position-title
@@ -52,10 +50,7 @@
 }
 .app-title{
     
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
+    @include font(700, 14px, 1.17, 0.03em);
     text-transform: uppercase;
-    color: var(--text-color-white);
+    color: $text-color-white;
 }

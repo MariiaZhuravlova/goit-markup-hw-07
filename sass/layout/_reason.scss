@@ -1,0 +1,52 @@
+
+.reason-list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+            
+}
+.reason-item
+{
+    @include font(400, 14px, 1.71, 0.03em);
+    color: $title-text-color;
+    
+   }
+   .icon-reason{
+    width: 70px;
+    height: 70px;
+   }
+   
+    .reason-picture{ 
+    height: 120px;
+
+    background-color: $bgc-section;
+    margin-bottom: 30px;
+
+    @extend %align-items;
+    justify-content: center;
+    
+   }
+
+.reason-item-card{
+    
+    .reason-list > &
+{
+   flex-basis: calc((100% / 4) - 30px);
+      
+ }
+
+    &:not(:last-child){
+    margin-right:  $card-set-gap;
+    }
+}
+
+.reason-title
+{margin-bottom: 10px;
+
+@include font(700, 14px, 1.14, 0.03em);
+text-transform: uppercase;
+color: $primary-text-color;
+}
