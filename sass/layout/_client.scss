@@ -1,9 +1,9 @@
-.client-section
+.client
 {   
     text-align: center;
      
 }
-.client-section__title{
+.client__title{
     margin-bottom: 50px;
     
     @include font(700, 36px, 1.17, 0.03em);

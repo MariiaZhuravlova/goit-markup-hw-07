@@ -428,7 +428,7 @@ textarea {
   fill: #2196F3;
 }
 
-.hero-field {
+.hero {
   max-width: 1600px;
   height: 600px;
   background-color: #C4C4C4;
@@ -552,12 +552,12 @@ textarea {
   color: #ffffff;
 }
 
-.team-section {
+.team {
   background-color: #F5F4FA;
   text-align: center;
 }
 
-.team-section__title {
+.team__title {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -609,11 +609,11 @@ textarea {
   margin-bottom: 16px;
 }
 
-.client-section {
+.client {
   text-align: center;
 }
 
-.client-section__title {
+.client__title {
   margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
@@ -673,7 +673,7 @@ textarea {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-field {
+.footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #2F303A;
@@ -787,7 +787,7 @@ textarea {
   margin-left: 10px;
 }
 
-.portfolio-filter {
+.portfolio {
   padding-top: 174px;
 }
 

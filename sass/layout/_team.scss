@@ -1,10 +1,10 @@
-.team-section
+.team
 {   
     background-color: $bgc-section;
     text-align: center;
      
 }
-.team-section__title
+.team__title
 {   margin-bottom: 50px;
     
     @include font(700, 36px, 1.16, 0.03em);
